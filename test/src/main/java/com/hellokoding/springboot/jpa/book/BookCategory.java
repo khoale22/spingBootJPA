@@ -16,13 +16,13 @@ public class BookCategory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "book_category_id")
     private int id;
 
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "bookCategory", cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "bookCategory", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
     private Set<Book> books;
 
     public BookCategory(){}

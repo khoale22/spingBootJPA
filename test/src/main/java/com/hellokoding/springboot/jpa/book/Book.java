@@ -1,5 +1,7 @@
 package com.hellokoding.springboot.jpa.book;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -16,6 +18,7 @@ public class Book {
     @Column(name = "name")
     private String name;
 
+    @JsonIgnoreProperties(value = "name")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "book_category_id", insertable = false, updatable = false, nullable = false )
     private BookCategory bookCategory;
