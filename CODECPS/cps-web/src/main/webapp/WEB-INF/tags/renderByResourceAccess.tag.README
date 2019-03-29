@@ -1,0 +1,57 @@
+Sirs,
+rendering by resource access is complete and checked in to CVS.  I have checked in a new tag file called renderByResourceAccess.tag.  It renders different fragments of jsp markup based on the user's access to a particular resource.  I will send out a Jing video on this tomorrow.  Until then, here is a breakdown of how to use it.
+
+
+First, the prerequisites:
+
+1.  YOU MUST CHECK OUT THE LATEST HEBGlassFishAuth CODE FROM CVS, EXPORT A JAR, AND REPLACE YOUR EXISTING HEBGlassfish.jar.  None of this will work unless you have a HEBGlassfishAuth.jar containing the latest code from CVS.
+
+2.  You must turn on security for your web app.  That means if you have the login code commented out in your local workspace, alot of things won't show up.
+
+3.  You should set these properties for your 'HEB' security realm:
+catalog-prepend: dcps01
+security-datasource-jndi: jndi/CPSDS (This should point to a local datasource pointing to dcps01, where the test data is)
+auth-type: HEBCustom
+bypass-idm: true
+jaas-context: hebRealm
+default-group: Guest
+
+Now you're ready to use the new tag:
+
+4.  Now, you can log in as one of 3 users right now: bdm, vendor, and admin.  Each of these users has some different privileges set up.
+5.  You can see how the taglib works by looking at header.jsp in the section where it renders the menu.  It should be self-explanatory, but here's another example of how to use the tag:
+
+
+
+
+<cps:renderByResourceAccess resourceId="18">
+  <jsp:attribute name="VIEW">
+    This will be rendered to the screen if the current user's group has 'V' access to resource id 18 in the sec_grp_resrc table.
+  </jsp:attribute>
+  <jsp:attribute name="NONE">
+    This will be rendered to the screen if the current user's group has 'N' access to resource id 18 in the sec_grp_resrc table.
+  </jsp:attribute>
+  <jsp:attribute name="EDIT">
+    This will be rendered to the screen if the current user's group has 'ED' access to resource id 18 in the sec_grp_resrc table.
+  </jsp:attribute>
+  <jsp:attribute name="EXEC">
+    This will be rendered to the screen if the current user's group has 'EX' access to resource id 18 in the sec_grp_resrc table.
+  </jsp:attribute>
+</cps:renderByResourceAccess>          
+
+
+I hope that is sufficiently self-explanatory.  I'll go through tomorrow and put in a few more examples.
+
+
+6.  Here are some basic rules.  Someone please correct me if something's not right here:
+  a.  resources of type 'SCREEN' and 'SECTION' will have an access type of 'VIEW' or 'NONE' so don't need to supply markup for 'EDIT' or 'EXEC'
+  b.  resources of type 'ATTRIBUTE' will have an access type of 'EDIT', 'VIEW', or 'NONE', so you should supply markup for all 3 cases.
+  c.  resources of type 'FUNCTION' will have an access type of 'EXEC' or 'NONE'.  So in the case of a button, 'EXEC' means you show the button and 'NONE' means you don't show anything.
+
+
+
+Please feel free to contact me any time if you have any questions or problems. 
+
+Thanks,
+Rob
+

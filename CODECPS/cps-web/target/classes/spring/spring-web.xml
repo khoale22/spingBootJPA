@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	   xsi:schemaLocation="http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		">
+	<context:annotation-config />
+	<util:properties id="messageResourcesProperties" location="classpath:MessageResources.properties"/>
+	<context:property-placeholder properties-ref="messageResourcesProperties"/>
+	<context:property-placeholder location="classpath:CPSTableNames.properties"
+								  order="2" ignore-unresolvable="true" ignore-resource-not-found="true" />
+	<context:property-placeholder location="classpath:EmailResource.properties"
+								  order="3" ignore-unresolvable="true" ignore-resource-not-found="true" />
+	<context:property-placeholder location="classpath:HelpCodes.properties"
+								  order="4" ignore-unresolvable="true" ignore-resource-not-found="true" />
+	<context:property-placeholder location="classpath:HelpMessages.properties"
+								  order="5" ignore-unresolvable="true" ignore-resource-not-found="true" />
+	<context:property-placeholder location="classpath:HelpTexts.properties"
+								  order="6" ignore-unresolvable="true" ignore-resource-not-found="true" />
+	<mvc:annotation-driven />
+	<context:component-scan base-package="com.heb.operations.cps.controller" />
+	<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="jacksonMessageConverter"/>
+			</list>
+		</property>
+	</bean>
+	<!--	<bean id="viewResolver"
+              class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+            <property name="viewClass"
+                      value="org.springframework.web.servlet.view.JstlView" />
+            <property name="prefix" value="/webapp/" />
+            <property name="suffix" value=".jsp" />
+        </bean>-->
+
+	<mvc:resources mapping="/*" location="/"/>
+	<bean id="viewResolver"  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<bean id = "multipartResolver"
+		  class = "org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+</beans>

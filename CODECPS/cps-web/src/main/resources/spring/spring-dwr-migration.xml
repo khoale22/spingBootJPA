@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd 
+       http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<dwr:url-mapping />
+	<dwr:controller id="dwrController" debug="true">
+		<dwr:config-param name="activeReverseAjaxEnabled"
+			value="true" />
+		<dwr:config-param name="initApplicationScopeCreatorsAtStartup"
+			value="true" />
+		<dwr:config-param name="maxWaitAfterWrite" value="true" />
+		<dwr:config-param name="allowScriptTagRemoting"
+			value="true" />
+		<dwr:config-param name="crossDomainSessionSecurity"
+			value="true" />
+		<dwr:config-param name="generateDtoClasses" value="true" />
+		<dwr:config-param name="jsonpEnabled" value="true" />
+	</dwr:controller>
+
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="alwaysUseFullPath" value="true" />
+		<property name="mappings">
+			<props>
+				<prop key="/engine.js">dwrController</prop>
+				<prop key="/util.js">dwrController</prop>
+				<prop key="/interface/**">dwrController</prop>
+				<prop key="/call/**">dwrController</prop>
+				<prop key="/dwr/**/*">dwrController</prop>
+				<prop key="/plaincall/**">dwrController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<dwr:configuration>
+		<dwr:convert class="com.heb.operations.business.framework.vo.*"
+			type="bean" />
+		<dwr:convert class="com.heb.operations.cps.vo.*" type="bean" />
+		<dwr:convert
+			class="com.heb.operations.business.framework.exeption.CPSMessage"
+			type="bean" />
+		<dwr:convert class="com.heb.operations.cps.ejb.batchUpload2.*"
+			type="bean" />
+		<dwr:convert class="com.heb.operations.cps.vo.ImageAttribute.*" type="bean" />
+	</dwr:configuration>
+
+	<bean class="com.heb.operations.cps.dwr.service.spring.AddNewCandidateDWR"
+		id="addNewCandidateDWR">
+		<dwr:remote javascript="AddCandidateTemp">
+			<dwr:exclude method="getForm" />
+			<dwr:filter class="com.heb.operations.ui.framework.dwr.custom.HEBSpringDWRIntegrationFilter"></dwr:filter>
+		</dwr:remote>
+	</bean>
+
+	<bean class="com.heb.operations.cps.dwr.service.spring.ManageCandidateDWR"
+		id="manageDWR">
+		<dwr:remote javascript="ManageDWR">
+			<dwr:exclude method="getForm" />
+			<dwr:filter class="com.heb.operations.ui.framework.dwr.custom.HEBSpringDWRIntegrationFilter"></dwr:filter>
+		</dwr:remote>
+	</bean>
+
+	<bean class="com.heb.operations.ui.framework.dwr.service.FieldHelpDWR"
+		id="fieldHelpDWR">
+		<dwr:remote javascript="FieldHelp">
+			<dwr:exclude method="getForm" />
+			<dwr:filter class="com.heb.operations.ui.framework.dwr.custom.HEBSpringDWRIntegrationFilter"></dwr:filter>
+		</dwr:remote>
+	</bean>
+
+
+	<bean class="com.heb.operations.cps.dwr.service.spring.ManageProductDWR"
+		id="manageProductDWR">
+		<dwr:remote javascript="ProductDWR">
+			<dwr:exclude method="getForm" />
+			<dwr:filter class="com.heb.operations.ui.framework.dwr.custom.HEBSpringDWRIntegrationFilter"></dwr:filter>
+		</dwr:remote>
+	</bean>
+
+
+	<bean class="com.heb.operations.cps.batchUpload2.BatchUpload2DWR"
+		id="batchUpload2DWR">
+		<dwr:remote javascript="BatchUpload2DWR">
+			<dwr:exclude method="getForm" />
+			<dwr:filter class="com.heb.operations.ui.framework.dwr.custom.HEBSpringDWRIntegrationFilter"></dwr:filter>
+		</dwr:remote>
+	</bean>
+
+	<bean class="com.heb.operations.cps.dwr.service.spring.ManageCandidateEDIDWR"
+		id="manageCandidateEDIDWR">
+		<dwr:remote javascript="ManageEDIDWR">
+			<dwr:exclude method="getForm" />
+			<dwr:filter class="com.heb.operations.ui.framework.dwr.custom.HEBSpringDWRIntegrationFilter"></dwr:filter>
+		</dwr:remote>
+	</bean>
+</beans>

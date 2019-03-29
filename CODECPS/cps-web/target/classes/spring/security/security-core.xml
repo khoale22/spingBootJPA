@@ -1,0 +1,79 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="ldapAuthProvider" />
+	</security:authentication-manager>
+	<bean id="authoritiesPopulator" class="com.heb.jaf.security.HebAuthoritiesPopulator">
+		<property name="arbafDao" ref="arbafDao" />
+		<property name="applAbb" value="${security.arbafappid}" />
+	</bean>
+
+	<bean id="userDetailsMapper" class="com.heb.jaf.security.UserInfoMapper" />
+
+	<bean id="userDetailsService" class="com.heb.jaf.security.HebLdapUserService">
+		<property name="userFinders">
+			<list>
+				<ref bean="hebSearch" />
+				<!-- <ref bean="vendorSearch" /> -->
+			</list>
+		</property>
+		<property name="userMapper" ref="userDetailsMapper" />
+		<property name="authPopulator" ref="authoritiesPopulator" />
+	</bean>
+
+	<bean id="arbafDao" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceArbaf" />
+	</bean>
+
+	<bean id="ldapAuthProvider"
+		class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
+		<constructor-arg>
+			<bean
+				class="org.springframework.security.ldap.authentication.BindAuthenticator">
+				<constructor-arg ref="contextSource" />
+				<property name="userSearch" ref="hebSearch">
+				</property>
+			</bean>
+		</constructor-arg>
+		<constructor-arg ref="authoritiesPopulator" />
+		<property name="userDetailsContextMapper" ref="userDetailsMapper" />
+	</bean>
+
+	<bean id="hebSearch" class="com.heb.jaf.security.HebLdapUserSearch">
+		<constructor-arg ref="contextSource"  />
+		<constructor-arg ref="contextSourceVendor"  />
+		<property name="searchBasePattern" value="ou=people,o=intranet" />
+<!-- 		<property name="searchBasePatternVendor" value="ou=people,ou=vendors" /> -->
+		<property name="searchFilter" value="uid={0}" />
+	</bean>
+
+	<bean id="contextSource"
+		class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+		<constructor-arg value="${security.ldap.heb.url}/dc=heb,dc=com" />
+		<property name="userDn" value="${security.ldap.heb.userDn}" />
+		<property name="password" value="${security.ldap.heb.password}" />
+	</bean>
+
+	<bean id="contextSourceVendor"
+		class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+		<constructor-arg value="${security.ldap.heb.vendor.url}/dc=heb,dc=com" />
+<!-- 		<property name="base" value="${security.ldap.heb.vendor.base}" /> -->
+		<property name="userDn" value="${security.ldap.heb.vendor.userDn}" />
+		<property name="password" value="${security.ldap.heb.vendor.password}" />
+	</bean>
+	<bean id="dataSourceArbaf" class="com.ibm.db2.jcc.DB2DataSource">
+		<property name="user" value="${app.database.db2t.username}" />
+		<property name="password" value="${app.database.db2t.password}" />
+		<property name="portNumber" value="${app.database.db2t.portNumber}" />
+		<property name="databaseName" value="${app.database.db2t.databaseName}" />
+		<property name="serverName" value="${app.database.db2t.serverName}" />
+		<property name="driverType" value="${app.database.db2t.driverType}" />
+	</bean>
+</beans>

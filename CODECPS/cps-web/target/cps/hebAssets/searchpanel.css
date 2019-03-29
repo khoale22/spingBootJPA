@@ -1,0 +1,13 @@
+#bdmSearch {
+    width:15em; /* set width here */
+    padding-bottom:2em;
+    padding-right: 2em;
+    font-size: 13px;
+}
+#bdmSearch {
+    z-index:9000; /* z-index needed on top instance for ie & sf absolute inside relative issue */
+}
+#bdmSearchInput{
+    _position:absolute; /* abs pos needed for ie quirks */
+    margin-right: 5px;
+}

@@ -1,0 +1,677 @@
+<% response.setContentType("text/css"); %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+
+@charset "UTF-8";
+/* CSS Document */
+
+.nutrition-wrapper {
+	margin-left: 30px;
+}
+.basicInfoWrapper {
+	width: 100%;
+}
+
+.basicInfoWrapper h3 {
+	color: black;
+	font-size: 13px;
+	display: inline;
+}
+
+#imageInfo {
+	width: 30%;
+	float: left;
+	margin-left: 30px;
+}
+
+#basicInfo {
+	width: 70%;
+}
+
+.redAsterisk {
+	color: red;
+	font-size: 15px;
+}
+.rowStandard {
+	margin-bottom: 10px;
+	padding: 0px 10px 10px 10px;
+}
+.imageStandard {
+	cursor: pointer;
+}
+#imagexpected {
+}
+.displayNameList {
+}
+.displayNameList table {
+	width:100%;
+	border-collapse: collapse;
+}
+.displayNameList table, .displayNameList table td, .displayNameList table th {
+	border: 1px solid #dedede;
+	padding: 5px;
+}
+.innerTable, .innerTable td, .innerTable th {
+	border: none !important;
+}
+#popUpRomanceCopy {
+	display: none;
+}
+#popUpDisplayName {
+	display: none;
+}
+
+/*css for display name pop up*/
+/* Skin default elements */
+#popUpDisplayName_c.yui-panel-container.shadow .underlay {
+	left: 1px;
+	right: -1px;
+	top: 1px;
+	bottom: -1px;
+	position: absolute;
+	background-color: #000;
+	opacity: 0.12;
+	filter: alpha(opacity = 12);
+}
+
+/* Apply the border to the right side */
+#popUpDisplayName.yui-panel{
+	border: none;
+	overflow: visible;
+	background: transparent url(hebAssets/images/xp-brdr-rt.gif) no-repeat
+		top right;
+}
+
+/* Style the close icon */
+#popUpDisplayName.yui-panel .container-close{
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	height: 21px;
+	width: 21px;
+	background: url(hebAssets/images/xp-close.gif) no-repeat;
+}
+
+/* Style the header with its associated corners */
+#popUpDisplayName.yui-panel .hd{
+	padding: 0;
+	border: none;
+	background: url(hebAssets/images/xp-hd.gif) repeat-x;
+	color: #FFF;
+	height: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: left;
+	vertical-align: middle;
+	overflow: visible;
+}
+
+/* Style the body with the left border */
+#popUpDisplayName.yui-panel .bd {
+	overflow: hidden;
+	padding: 10px;
+	border: none;
+	background: #FFF url(hebAssets/images/xp-brdr-lt.gif) repeat-y;
+	margin: 0 4px 0 0;
+}
+
+/* Style the footer with the bottom corner images */
+#popUpDisplayName.yui-panel .ft{
+	background: url(hebAssets/images/xp-ft.gif) repeat-x;
+	font-size: 11px;
+	height: 26px;
+	padding: 0px 10px;
+	border: none
+}
+
+/* Skin custom elements */
+#popUpDisplayName.yui-panel .hd span{
+	line-height: 30px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#popUpDisplayName.yui-panel .hd .tl{
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	left: 0px;
+	background: url(hebAssets/images/xp-tl.gif) no-repeat;
+	position: absolute;
+}
+
+#popUpDisplayName.yui-panel .hd .tr {
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	right: 0;
+	background: url(hebAssets/images/xp-tr.gif) no-repeat;
+	position: absolute;
+}
+
+#popUpDisplayName.yui-panel .ft span{
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+#popUpDisplayName.yui-panel .ft .bl {
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	left: 0;
+	background: url(hebAssets/images/xp-bl.gif) no-repeat;
+	position: absolute;
+}
+
+#popUpDisplayName.yui-panel .ft .br{
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	right: 0;
+	background: url(hebAssets/images/xp-br.gif) no-repeat;
+	position: absolute;
+}
+
+.buttonBar{
+	height: 26px;
+	width: 100%;
+}
+
+#popUpDisplayName button.brick_bt{
+	width: 70px;
+	margin: 5px 0px 5px 5px;
+}
+/* css for romance copy pop up */
+#popUpRomanceCopy_c.yui-panel-container.shadow .underlay {
+	left: 1px;
+	right: -1px;
+	top: 1px;
+	bottom: -1px;
+	position: absolute;
+	background-color: #000;
+	opacity: 0.12;
+	filter: alpha(opacity = 12);
+}
+
+/* Apply the border to the right side */
+#popUpRomanceCopy.yui-panel{
+	border: none;
+	overflow: visible;
+	background: transparent url(hebAssets/images/xp-brdr-rt.gif) no-repeat
+		top right;
+}
+
+/* Style the close icon */
+#popUpRomanceCopy.yui-panel .container-close{
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	height: 21px;
+	width: 21px;
+	background: url(hebAssets/images/xp-close.gif) no-repeat;
+}
+
+/* Style the header with its associated corners */
+#popUpRomanceCopy.yui-panel .hd{
+	padding: 0;
+	border: none;
+	background: url(hebAssets/images/xp-hd.gif) repeat-x;
+	color: #FFF;
+	height: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: left;
+	vertical-align: middle;
+	overflow: visible;
+}
+
+/* Style the body with the left border */
+#popUpRomanceCopy.yui-panel .bd {
+	overflow: hidden;
+	padding: 10px;
+	border: none;
+	background: #FFF url(hebAssets/images/xp-brdr-lt.gif) repeat-y;
+	margin: 0 4px 0 0;
+}
+
+/* Style the footer with the bottom corner images */
+#popUpRomanceCopy.yui-panel .ft{
+	background: url(hebAssets/images/xp-ft.gif) repeat-x;
+	font-size: 11px;
+	height: 26px;
+	padding: 0px 10px;
+	border: none
+}
+
+/* Skin custom elements */
+#popUpRomanceCopy.yui-panel .hd span{
+	line-height: 30px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#popUpRomanceCopy.yui-panel .hd .tl{
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	left: 0px;
+	background: url(hebAssets/images/xp-tl.gif) no-repeat;
+	position: absolute;
+}
+
+#popUpRomanceCopy.yui-panel .hd .tr {
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	right: 0;
+	background: url(hebAssets/images/xp-tr.gif) no-repeat;
+	position: absolute;
+}
+
+#popUpRomanceCopy.yui-panel .ft span{
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+#popUpRomanceCopy.yui-panel .ft .bl {
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	left: 0;
+	background: url(hebAssets/images/xp-bl.gif) no-repeat;
+	position: absolute;
+}
+
+#popUpRomanceCopy.yui-panel .ft .br{
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	right: 0;
+	background: url(hebAssets/images/xp-br.gif) no-repeat;
+	position: absolute;
+}
+
+#popUpRomanceCopy button.brick_bt{
+	width: 70px;
+	margin: 5px 0px 5px 5px;
+}
+.bd input[type='text'] {
+	width:250px
+}
+.tblNutrition {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #dedede;
+	margin: 20px 0px; 
+}
+.nutrientInfo h3 {
+	display: inline;
+	width: auto;
+}
+.tblNutrition td{
+	border: none;
+	padding: 5px
+}
+#nutritionPopupWrapper {
+	display: none;
+}
+
+/*css for nutrition pop up*/
+/* Skin default elements */
+#nutritionPopupWrapper_c.yui-panel-container.shadow .underlay {
+	left: 1px;
+	right: -1px;
+	top: 1px;
+	bottom: -1px;
+	position: absolute;
+	background-color: #000;
+	opacity: 0.12;
+	filter: alpha(opacity = 12);
+}
+
+/* Apply the border to the right side */
+#nutritionPopupWrapper.yui-panel{
+	border: none;
+	overflow: visible;
+	background: transparent url(hebAssets/images/xp-brdr-rt.gif) no-repeat
+		top right;
+}
+
+/* Style the close icon */
+#nutritionPopupWrapper.yui-panel .container-close{
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	height: 21px;
+	width: 21px;
+	background: url(hebAssets/images/xp-close.gif) no-repeat;
+}
+
+/* Style the header with its associated corners */
+#nutritionPopupWrapper.yui-panel .hd{
+	padding: 0;
+	border: none;
+	background: url(hebAssets/images/xp-hd.gif) repeat-x;
+	color: #FFF;
+	height: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: left;
+	vertical-align: middle;
+	overflow: visible;
+}
+
+/* Style the body with the left border */
+#nutritionPopupWrapper.yui-panel .bd {
+	overflow: hidden;
+	padding: 10px;
+	border: none;
+	background: #FFF url(hebAssets/images/xp-brdr-lt.gif) repeat-y;
+	margin: 0 4px 0 0;
+}
+
+/* Style the footer with the bottom corner images */
+#nutritionPopupWrapper.yui-panel .ft{
+	background: url(hebAssets/images/xp-ft.gif) repeat-x;
+	font-size: 11px;
+	height: 26px;
+	padding: 0px 10px;
+	border: none
+}
+
+/* Skin custom elements */
+#nutritionPopupWrapper.yui-panel .hd span{
+	line-height: 30px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#nutritionPopupWrapper.yui-panel .hd .tl{
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	left: 0px;
+	background: url(hebAssets/images/xp-tl.gif) no-repeat;
+	position: absolute;
+}
+
+#nutritionPopupWrapper.yui-panel .hd .tr {
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	right: 0;
+	background: url(hebAssets/images/xp-tr.gif) no-repeat;
+	position: absolute;
+}
+
+#nutritionPopupWrapper.yui-panel .ft span{
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+#nutritionPopupWrapper.yui-panel .ft .bl {
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	left: 0;
+	background: url(hebAssets/images/xp-bl.gif) no-repeat;
+	position: absolute;
+}
+
+#nutritionPopupWrapper.yui-panel .ft .br{
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	right: 0;
+	background: url(hebAssets/images/xp-br.gif) no-repeat;
+	position: absolute;
+}
+
+.buttonBar{
+	height: 26px;
+	width: 100%;
+}
+
+#nutritionPopupWrapper button.brick_bt{
+	width: 70px;
+	margin: 5px 0px 5px 5px;
+}
+#nutriClaimsPopup {
+	display: none;
+}
+#frameNutriClaims {
+	width: 100%;
+	height: 100%;
+}
+#nutriClaimsPopup_c.yui-panel-container.shadow .underlay {
+	left: 1px;
+	right: -1px;
+	top: 1px;
+	bottom: -1px;
+	position: absolute;
+	background-color: #000;
+	opacity: 0.12;
+	filter: alpha(opacity = 12);
+}
+
+/* Apply the border to the right side */
+#nutriClaimsPopup.yui-panel{
+	border: none;
+	overflow: visible;
+	background: transparent url(hebAssets/images/xp-brdr-rt.gif) no-repeat
+		top right;
+}
+
+/* Style the close icon */
+#nutriClaimsPopup.yui-panel .container-close{
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	height: 21px;
+	width: 21px;
+	background: url(hebAssets/images/xp-close.gif) no-repeat;
+}
+
+/* Style the header with its associated corners */
+#nutriClaimsPopup.yui-panel .hd{
+	padding: 0;
+	border: none;
+	background: url(hebAssets/images/xp-hd.gif) repeat-x;
+	color: #FFF;
+	height: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: left;
+	vertical-align: middle;
+	overflow: visible;
+}
+
+/* Style the body with the left border */
+#nutriClaimsPopup.yui-panel .bd {
+	overflow: hidden;
+	padding: 10px;
+	border: none;
+	background: #FFF url(hebAssets/images/xp-brdr-lt.gif) repeat-y;
+	margin: 0 4px 0 0;
+}
+
+/* Style the footer with the bottom corner images */
+#nutriClaimsPopup.yui-panel .ft{
+	background: url(hebAssets/images/xp-ft.gif) repeat-x;
+	font-size: 11px;
+	height: 26px;
+	padding: 0px 10px;
+	border: none
+}
+
+/* Skin custom elements */
+#nutriClaimsPopup.yui-panel .hd span{
+	line-height: 30px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#nutriClaimsPopup.yui-panel .hd .tl{
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	left: 0px;
+	background: url(hebAssets/images/xp-tl.gif) no-repeat;
+	position: absolute;
+}
+
+#nutriClaimsPopup.yui-panel .hd .tr {
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	right: 0;
+	background: url(hebAssets/images/xp-tr.gif) no-repeat;
+	position: absolute;
+}
+
+#nutriClaimsPopup.yui-panel .ft span{
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+#nutriClaimsPopup.yui-panel .ft .bl {
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	left: 0;
+	background: url(hebAssets/images/xp-bl.gif) no-repeat;
+	position: absolute;
+}
+
+#nutriClaimsPopup.yui-panel .ft .br{
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	right: 0;
+	background: url(hebAssets/images/xp-br.gif) no-repeat;
+	position: absolute;
+}
+
+#nutriClaimsPopup button.brick_bt{
+	width: 70px;
+	margin: 5px 0px 5px 5px;
+}
+#preStatePopup {
+	display: none;
+}
+#framPreState {
+	width: 100%;
+	height: 100%;
+}
+#preStatePopup_c.yui-panel-container.shadow .underlay {
+	left: 1px;
+	right: -1px;
+	top: 1px;
+	bottom: -1px;
+	position: absolute;
+	background-color: #000;
+	opacity: 0.12;
+	filter: alpha(opacity = 12);
+}
+
+/* Apply the border to the right side */
+#preStatePopup.yui-panel{
+	border: none;
+	overflow: visible;
+	background: transparent url(hebAssets/images/xp-brdr-rt.gif) no-repeat
+		top right;
+}
+
+/* Style the close icon */
+#preStatePopup.yui-panel .container-close{
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	height: 21px;
+	width: 21px;
+	background: url(hebAssets/images/xp-close.gif) no-repeat;
+}
+
+/* Style the header with its associated corners */
+#preStatePopup.yui-panel .hd{
+	padding: 0;
+	border: none;
+	background: url(hebAssets/images/xp-hd.gif) repeat-x;
+	color: #FFF;
+	height: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: left;
+	vertical-align: middle;
+	overflow: visible;
+}
+
+/* Style the body with the left border */
+#preStatePopup.yui-panel .bd {
+	overflow: hidden;
+	padding: 10px;
+	border: none;
+	background: #FFF url(hebAssets/images/xp-brdr-lt.gif) repeat-y;
+	margin: 0 4px 0 0;
+}
+
+/* Style the footer with the bottom corner images */
+#preStatePopup.yui-panel .ft{
+	background: url(hebAssets/images/xp-ft.gif) repeat-x;
+	font-size: 11px;
+	height: 26px;
+	padding: 0px 10px;
+	border: none
+}
+
+/* Skin custom elements */
+#preStatePopup.yui-panel .hd span{
+	line-height: 30px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#preStatePopup.yui-panel .hd .tl{
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	left: 0px;
+	background: url(hebAssets/images/xp-tl.gif) no-repeat;
+	position: absolute;
+}
+
+#preStatePopup.yui-panel .hd .tr {
+	width: 8px;
+	height: 29px;
+	top: 1px;
+	right: 0;
+	background: url(hebAssets/images/xp-tr.gif) no-repeat;
+	position: absolute;
+}
+
+#preStatePopup.yui-panel .ft span{
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+#preStatePopup.yui-panel .ft .bl {
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	left: 0;
+	background: url(hebAssets/images/xp-bl.gif) no-repeat;
+	position: absolute;
+}
+
+#preStatePopup.yui-panel .ft .br{
+	width: 8px;
+	height: 26px;
+	bottom: 0;
+	right: 0;
+	background: url(hebAssets/images/xp-br.gif) no-repeat;
+	position: absolute;
+}
+
+#preStatePopup button.brick_bt{
+	width: 70px;
+	margin: 5px 0px 5px 5px;
+}

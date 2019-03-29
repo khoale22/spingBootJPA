@@ -1,0 +1,88 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	<beans:import resource="classpath:spring/security/security-core.xml" />
+	<beans:bean id="ajaxTimeoutRedirectFilter" class="com.heb.jaf.util.AjaxTimeoutRedirectFilter">
+		<beans:property name="customSessionExpiredErrorCode"
+			value="901" />
+	</beans:bean>
+	<beans:bean id="customAuthenticationSuccessHandler"
+		class="com.heb.jaf.security.CustomAuthenticationSuccessHandler">
+		<beans:property name="defaultTargetUrl" value="/protected/cps/manage/candSearchWrapper" />
+		<beans:property name="targetUrlParameter" value="spring-security-redirect" />
+	</beans:bean>
+	<beans:bean id="customAuthenticationEntryPoint"
+		class="com.heb.jaf.util.CustomAuthenticationEntryPoint">
+		<beans:property name="loginPageUrl" value="/login.do?mode=normal" />
+		<beans:property name="returnParameterEnabled" value="false" />
+		<beans:property name="returnParameterName" value="r" />
+	</beans:bean>
+	<beans:bean id="myAccessDeniedHandler" class="com.heb.jaf.security.CustomAccessDeniedHandler"/>
+    <!-- <constructor-arg ref="myInvalidSessionStrategy" /> -->
+	<http use-expressions="true" disable-url-rewriting="true" entry-point-ref="customAuthenticationEntryPoint" auto-config="true">
+		<!-- This is where you add intercept urls for spring security, as follows -->
+		<!-- <intercept-url pattern="/sercure/**" access="hasRole('USER')"/> -->
+		<intercept-url pattern="/login" access="permitAll" />
+		<intercept-url pattern="/logout" access="permitAll" />
+		<!-- <intercept-url pattern="/checkSessionTimeOut" access="permitAll"/> -->
+		<intercept-url pattern="/cps/**" access="permitAll" />
+		<intercept-url pattern="/hebAssets/**" access="permitAll" />
+		<intercept-url pattern="/resources/**" access="permitAll"/>
+		<intercept-url pattern="/yui/**" access="permitAll" />
+
+
+		<!-- <intercept-url pattern="/protected/Main.do?action=candSearchWrapper" 
+			access="hasRole('ROLE_GUEST')"/> -->
+		<intercept-url pattern="/protected/cps/add/**"
+			access="hasAnyRole('ROLE_ADMIN','ROLE_RVEND','ROLE_UVEND','ROLE_PIA','ROLE_PIAL','ROLE_SCMAN', 'ROLE_BDM')" />
+		<intercept-url pattern="/protected/cps/manage/**"
+			access="isAuthenticated()" />
+		<intercept-url pattern="/protected/cps/bacthUpload/**"
+					   access="isAuthenticated()" />
+		<intercept-url pattern="/protected/cps/volumeUploadProfile/**"
+					   access="isAuthenticated()" />
+		<intercept-url pattern="/protected/cps/manageEDI/**"
+			access="isAuthenticated()" />
+		<intercept-url pattern="/protected/cps/security/**"
+			access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/protected/**" access="hasRole('ROLE_GUEST')" />
+		<!-- Give access to everybody for CommonDwr.aCommonMethod.dwr -->
+
+		<!-- <intercept-url pattern="/" access="hasRole('ROLE_PMADMN')"/> -->
+		<!-- <intercept-url pattern="/**" access="hasRole('ROLE_PMADMN')"/> -->
+		<custom-filter ref="ajaxTimeoutRedirectFilter" after="EXCEPTION_TRANSLATION_FILTER" />
+		<!-- When a user is authenticated but does not have proper authority, forward 
+			them to this page -->
+		<access-denied-handler  ref="myAccessDeniedHandler" />
+
+		<form-login login-page="/login.do?mode=normal"
+			login-processing-url="/j_spring_security_check"
+			always-use-default-target="true" default-target-url="/"
+			authentication-failure-url="/login.do?mode=error"
+			authentication-success-handler-ref="customAuthenticationSuccessHandler" />
+
+		<!-- <logout logout-url="/logout" invalidate-session="true" logout-success-url="/login"/> -->
+		<logout logout-success-url="/login.do?mode=normal"
+			delete-cookies="JSESSIONID, DWRSESSIONID" />
+		<remember-me use-secure-cookie="true" />
+		<!-- invalid-session-url="/login" -->
+		<session-management session-fixation-protection="newSession">
+			<!-- <concurrency-control max-sessions="1" error-if-maximum-exceeded="false"/> -->
+		</session-management>
+		<csrf  request-matcher-ref="csrfSecurityRequestMatcher"/>
+	</http>
+	<!-- <beans:bean id="403" -->
+	<!-- class="com.heb.enterprise.dsv.assortment.utils.MyAccessDeniedHandler"> -->
+	<!-- <beans:property name="errorPage" value="403" /> -->
+	<!-- </beans:bean> -->
+
+	<global-method-security pre-post-annotations="enabled">
+		<!-- AspectJ pointcut expression that locates our "post" method and applies 
+			security that way <protect-pointcut expression="execution(* bigbank.*Service.post*(..))" 
+			access="ROLE_TELLER"/> -->
+	</global-method-security>
+
+</beans:beans>

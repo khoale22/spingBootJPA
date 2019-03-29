@@ -1,0 +1,672 @@
+
+<!--
+Automatically created by JspC.
+Place this fragment in the web.xml before all icon, display-name,
+description, distributable, and context-param elements.
+-->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.autoCompleteHeader_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.autoCompleteHeader_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.blank_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.blank_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.calendar_005fhead_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.calendar_005fhead_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.common_005fhead_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.common_005fhead_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.common_005fhead_005fpopUp_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.common_005fhead_005fpopUp_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cpsErrors_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cpsErrors_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.errors_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.errors_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.footer_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.footer_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.header_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.header_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.header_005flogin_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.header_005flogin_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.login_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.login_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.Main_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.Main_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.Main1_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.Main1_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.common_css_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.common_css_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.blank_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.blank_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.blank2_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.blank2_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.customEdit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.customEdit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.customView_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.customView_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.edit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.edit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.exec_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.exec_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.none_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.none_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.nonespecified_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.nonespecified_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.resourceBasedLayout_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.resourceBasedLayout_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.view_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.tiles.layout.view_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.hebAssets.moduleIncludes.auth_js_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.hebAssets.moduleIncludes.auth_js_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.test.done_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.test.done_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.roles.rolesPrivileges_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.roles.rolesPrivileges_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.roles.rolesPrivileges1_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.roles.rolesPrivileges1_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.CPSManageMain_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.CPSManageMain_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.CPSProductSearch_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.CPSProductSearch_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.ajaxSearchResults_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.ajaxSearchResults_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.prodAjaxResults_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.prodAjaxResults_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.productSearch_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.productSearch_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.productSearchResults_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.productSearchResults_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.search_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.search_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.searchpanel_005fhead_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.searchpanel_005fhead_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.searchResults_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.searchResults_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.manage.modules.testScan_005fpopup_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.manage.modules.testScan_005fpopup_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.batch.CPSBatchUpload_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.batch.CPSBatchUpload_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.AddCandidateOtherInfo_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.AddCandidateOtherInfo_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.AddNewMain_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.AddNewMain_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.authAndDistAjax_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.authAndDistAjax_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.authAndDistVendorAjax_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.authAndDistVendorAjax_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.authorizationAndDistribution_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.authorizationAndDistribution_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.authorizeWHS_005fpopup_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.authorizeWHS_005fpopup_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.ingdAttrib_005fpopup_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.ingdAttrib_005fpopup_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.ingrd_005fpopUpAjax_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.ingrd_005fpopUpAjax_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.merchandisingAttribute_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.merchandisingAttribute_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.MrtMainAjax_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.MrtMainAjax_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.mrtMainScreen_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.mrtMainScreen_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.pharmacyAttrib_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.pharmacyAttrib_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.pluGenerationPopup_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.pluGenerationPopup_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.posAndAccounting_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.posAndAccounting_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.powStatusPage_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.powStatusPage_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.prodClassification_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.prodClassification_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.productAndUpc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.productAndUpc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.questionnaire_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.questionnaire_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.requestNewAttribute_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.requestNewAttribute_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.retail_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.retail_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.retailLinkPopup_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.retailLinkPopup_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.scaleAttrib_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.scaleAttrib_jsp</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.nutritionFacts_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.nutritionFacts_jsp</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.nutritionFactsGrid_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.nutritionFactsGrid_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.shelfEdge_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.shelfEdge_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.tobaccoAttrib_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.tobaccoAttrib_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.upc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.upc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.modules.viewStore_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.modules.viewStore_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.async.errors_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.async.errors_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.cps.add.async.success_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.cps.add.async.success_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.autoCompleteHeader_jsp</servlet-name>
+        <url-pattern>/autoCompleteHeader.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.blank_jsp</servlet-name>
+        <url-pattern>/blank.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.calendar_005fhead_jsp</servlet-name>
+        <url-pattern>/calendar_head.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.common_005fhead_jsp</servlet-name>
+        <url-pattern>/common_head.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.common_005fhead_005fpopUp_jsp</servlet-name>
+        <url-pattern>/common_head_popUp.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cpsErrors_jsp</servlet-name>
+        <url-pattern>/cpsErrors.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.errors_jsp</servlet-name>
+        <url-pattern>/errors.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.footer_jsp</servlet-name>
+        <url-pattern>/footer.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.header_jsp</servlet-name>
+        <url-pattern>/header.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.header_005flogin_jsp</servlet-name>
+        <url-pattern>/header_login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.login_jsp</servlet-name>
+        <url-pattern>/login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.Main_jsp</servlet-name>
+        <url-pattern>/Main.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.Main1_jsp</servlet-name>
+        <url-pattern>/Main1.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.common_css_jsp</servlet-name>
+        <url-pattern>/hebAssets/common.css.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.blank_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/blank.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.blank2_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/blank2.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.edit_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/edit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.exec_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/exec.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.none_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/none.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.nonespecified_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/nonespecified.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.resourceBasedLayout_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/resourceBasedLayout.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.tiles.layout.view_jsp</servlet-name>
+        <url-pattern>/hebAssets/tiles/layout/view.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.hebAssets.moduleIncludes.auth_js_jsp</servlet-name>
+        <url-pattern>/hebAssets/moduleIncludes/auth.js.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.test.done_jsp</servlet-name>
+        <url-pattern>/cps/test/done.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.roles.rolesPrivileges_jsp</servlet-name>
+        <url-pattern>/cps/roles/rolesPrivileges.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.roles.rolesPrivileges1_jsp</servlet-name>
+        <url-pattern>/cps/roles/rolesPrivileges1.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.CPSManageMain_jsp</servlet-name>
+        <url-pattern>/cps/manage/CPSManageMain.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.CPSProductSearch_jsp</servlet-name>
+        <url-pattern>/cps/manage/CPSProductSearch.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.ajaxSearchResults_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/ajaxSearchResults.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.prodAjaxResults_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/prodAjaxResults.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.productSearch_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/productSearch.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.productSearchResults_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/productSearchResults.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.search_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/search.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.searchpanel_005fhead_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/searchpanel_head.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.searchResults_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/searchResults.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.manage.modules.testScan_005fpopup_jsp</servlet-name>
+        <url-pattern>/cps/manage/modules/testScan_popup.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.AddCandidateOtherInfo_jsp</servlet-name>
+        <url-pattern>/cps/add/AddCandidateOtherInfo.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.authAndDistAjax_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/authAndDistAjax.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.authAndDistVendorAjax_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/authAndDistVendorAjax.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.authorizationAndDistribution_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/authorizationAndDistribution.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.authorizeWHS_005fpopup_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/authorizeWHS_popup.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.ingdAttrib_005fpopup_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/ingdAttrib_popup.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.merchandisingAttribute_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/merchandisingAttribute.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.MrtMainAjax_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/MrtMainAjax.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.mrtMainScreen_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/mrtMainScreen.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.pharmacyAttrib_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/pharmacyAttrib.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.pluGenerationPopup_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/pluGenerationPopup.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.posAndAccounting_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/posAndAccounting.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.powStatusPage_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/powStatusPage.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.prodClassification_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/prodClassification.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.productAndUpc_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/productAndUpc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.questionnaire_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/questionnaire.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.requestNewAttribute_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/requestNewAttribute.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.retail_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/retail.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.retailLinkPopup_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/retailLinkPopup.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.scaleAttrib_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/scaleAttrib.jsp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.nutritionFacts_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/nutritionFacts.jsp</url-pattern>
+    </servlet-mapping>
+    
+     <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.nutritionFactsGrid_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/nutritionFactsGrid.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.shelfEdge_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/shelfEdge.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.tobaccoAttrib_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/tobaccoAttrib.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.upc_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/upc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.modules.viewStore_jsp</servlet-name>
+        <url-pattern>/cps/add/modules/viewStore.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.cps.add.async.success_jsp</servlet-name>
+        <url-pattern>/cps/add/async/success.jsp</url-pattern>
+    </servlet-mapping>
+
+<!--
+All session-config, mime-mapping, welcome-file-list, error-page, taglib,
+resource-ref, security-constraint, login-config, security-role,
+env-entry, and ejb-ref elements should follow this fragment.
+-->

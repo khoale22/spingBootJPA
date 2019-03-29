@@ -1,0 +1,32 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" 
+  version="2.0">  
+  <tlib-version>1.3</tlib-version>
+    <jsp-version>1.2</jsp-version>
+<function>
+	<name>ceil</name>
+	<function-class>java.lang.Math</function-class>
+	<function-signature>double ceil(double)</function-signature>
+</function>
+<function>
+	<name>min</name>
+	<function-class>java.lang.Math</function-class>
+	<function-signature>double min(double, double)</function-signature>
+</function>
+<function>
+	<name>userInRole</name>
+	<function-class>com.heb.operations.cps.util.FunctionUtil</function-class>
+	<function-signature>boolean isUserInRole(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
+</function>
+<function>
+	<name>isVendor</name>
+	<function-class>com.heb.operations.cps.util.FunctionUtil</function-class>
+	<function-signature>boolean isVendor(javax.servlet.http.HttpServletRequest)</function-signature>
+</function>
+<function>
+	<name>length</name>
+	<function-class>com.heb.operations.cps.util.FunctionUtil</function-class>
+	<function-signature>int length(java.util.Collection)</function-signature>
+</function>
+</taglib>

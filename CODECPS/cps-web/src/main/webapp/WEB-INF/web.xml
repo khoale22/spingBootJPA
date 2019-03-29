@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+		 id="WebApp_ID" version="2.5">
+	<display-name>cps</display-name>
+	<welcome-file-list>
+		<welcome-file>/Main1</welcome-file>
+	</welcome-file-list>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			com.heb.operations.ui.framework.lifecyclelistener.CPSIndexLifecycleListener
+		</listener-class>
+	</listener>
+	<listener>
+		<display-name>ImageIO service provider loader/unloader</display-name>
+		<listener-class>com.twelvemonkeys.servlet.image.IIOProviderContextListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>CPSWebGeneral</filter-name>
+		<filter-class>com.heb.operations.cps.servlet.CPSWebFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CPSWebGeneral</filter-name>
+		<url-pattern>*.*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSWebGeneral</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>CPSWebGeneral</filter-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>CPSCacheControlFilter</filter-name>
+		<filter-class>com.heb.operations.cps.servlet.CPSCacheControlFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CPSCacheControlFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSCacheControlFilter</filter-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>CPSImageFilter</filter-name>
+		<filter-class>com.heb.operations.cps.servlet.CPSResourceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.GIF</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.gif</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.jpg</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.JPG</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.jpeg</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.JPEG</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.png</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.PNG</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.js</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.JS</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.css</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.CSS</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.bmp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.BMP</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CPSImageFilter</filter-name>
+		<url-pattern>*.css.jsp</url-pattern>
+	</filter-mapping>
+	<!--Spring security 3.0 config -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			<!-- classpath*:cps-service-context.xml -->
+			classpath:spring/spring-core.xml
+			classpath:spring/spring-beans.xml
+			classpath:spring/spring-security.xml
+			classpath:spring/ServletContextListener.xml
+		</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<!-- Servlet to view attachments -->
+		<servlet-name>AttachmentViewServlet</servlet-name>
+		<servlet-class>com.heb.operations.cps.servlet.AttachmentViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AttachmentViewServlet</servlet-name>
+		<url-pattern>/protected/AttachmentViewServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>PrintFormViewerServlet</display-name>
+		<servlet-name>PrintFormViewerServlet</servlet-name>
+		<servlet-class>com.heb.operations.cps.servlet.PrintFormViewerServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PrintFormViewerServlet</servlet-name>
+		<url-pattern>/protected/PrintFormViewerServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- The entry point to spring MVC. Specifies the config file.-->
+	<servlet>
+		<servlet-name>spring</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				classpath:spring/spring-web.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- This specifies at which url, requests will be delegated to a mapped to a spring MVC controller
+    Refer to the Servlet 3.0 specification if you do not know how to create a servlet url pattern.-->
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<!-- DWR Servlet to handle DWR Ajax requests. -->
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				classpath:spring/spring-dwr-migration.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+</web-app>

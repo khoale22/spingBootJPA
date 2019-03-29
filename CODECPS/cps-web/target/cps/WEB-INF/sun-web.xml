@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sun-web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Application Server 9.0 Servlet 2.5//EN" "http://www.sun.com/software/appserver/dtds/sun-web-app_2_5-0.dtd">
+<sun-web-app error-url="">
+	<context-root>/cps</context-root>
+	<session-config>
+		<session-manager persistence-type="memory" >
+		<manager-properties>
+			<property name="sessionFilename" value="" />
+		</manager-properties>
+		</session-manager>
+	</session-config>	
+	<!--  
+		<security-role-mapping>
+		
+		<role-name>Basic</role-name>
+		
+		<group-name>Guest</group-name>
+		
+		</security-role-mapping>  
+		<security-role-mapping>
+		
+		<role-name>Developer</role-name>
+		
+		<group-name>CPSDeveloper</group-name>
+		
+		</security-role-mapping>  
+		
+		<security-role-mapping>
+		
+		<role-name>Vendor</role-name>
+		
+		<group-name>Vendor</group-name>
+		
+		</security-role-mapping>       
+		<security-role-mapping>
+		
+		<role-name>Admin</role-name>
+		
+		<group-name>CPSAdmin</group-name>
+		
+		</security-role-mapping>  
+		
+		<security-role-mapping>
+		
+		<role-name>PIA</role-name>
+		
+		<group-name>PIA</group-name>
+		
+		</security-role-mapping>  
+		
+		<security-role-mapping>
+		
+		<role-name>BDM</role-name>
+		
+		<group-name>BDM</group-name>
+		
+		</security-role-mapping>            
+		<security-role-mapping>
+		
+		<role-name>SCA</role-name>
+		
+		<group-name>SCA</group-name>
+		
+		</security-role-mapping>
+		<security-role-mapping>
+		
+		<role-name>SM</role-name>
+		
+		<group-name>SM</group-name>
+		
+		</security-role-mapping>
+		
+		<security-role-mapping>
+		
+		<role-name>PA</role-name>
+		
+		<group-name>PA</group-name>
+		
+		</security-role-mapping> 
+		
+	-->
+	<class-loader delegate="true" />
+	<jsp-config>
+		<property name="keepgenerated" value="true">
+			<description>
+				Keep a copy of the generated servlet class java code.
+			</description>
+		</property>
+	</jsp-config>
+</sun-web-app>

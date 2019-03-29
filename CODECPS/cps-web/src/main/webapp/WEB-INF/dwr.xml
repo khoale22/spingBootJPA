@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+
+<!-- Here's how we use DWR in this app.  It's in a pretty limited capacity.  When you select a BDM, you
+want all the commodities to be populated with only the commodities available to that BDM.  You don't want
+to do a full screen refresh for this, so you do it with Ajax.  This app uses DWR to not only look up and 
+return those commodities, it also updates the Struts Action form.-->
+
+
+<dwr>
+
+  <allow>
+
+<!-- Any class serialized by DWR that resides in this package is serialized using their standard java bean 
+serializer which basically converts it into a javascript object containing all the bean's properties -->
+	<convert match="com.heb.operations.business.framework.vo.*" converter="bean"/>
+	<convert match="com.heb.operations.cps.vo.*" converter="bean"/>
+	<convert match="com.heb.operations.business.framework.exeption.CPSMessage" converter="bean"/>
+	<convert match="com.heb.operations.cps.ejb.batchUpload2.*" converter="bean"/>
+	
+	
+<!-- This filter looks to see if the service requested in a DWR call is associated with a struts form, 
+if so, it looks to see if the method of the request is associated with a particular property
+in that form.  If so, the return value of that DWR call will be applied to the struts form.  Why, you may ask, 
+this is because you have fields on the screen that were dynamically populated by DWR, but if you were to 
+manually refresh the screen, or navigate away and come back, those fields would be empty.  For this reason, 
+the results of DWR calls are applied to that page's associated Struts Action Form whenever applicable.
+Associations between DWR calls and Struts forms are made using custom annotations in the 
+com.heb.operations.ui.framework.dwr.custom package -->	
+	<!--<filter class="com.heb.operations.ui.framework.dwr.custom.HEBStrutsDWRIntegrationFilter"/> -->
+	
+<!-- DWR service to handle all dynamic requests from the AddNewCandidate application like
+'allCommoditiesForBDM, or allSubCommsForCommodity, etc -->
+	
+    <!--<create creator="spring" javascript="AddCandidateTemp">-->
+      <!--<param name="addNewCandidateDWR" value="com.heb.operations.cps.dwr.service.AddNewCandidateDWR"/>-->
+    <!--</create>-->
+    <!--<create creator="spring" javascript="ManageDWR">-->
+      <!--<param name="manageDWR" value="com.heb.operations.cps.dwr.service.ManageCandidateDWR"/>-->
+    <!--</create>-->
+    <!--<create creator="spring" javascript="FieldHelp">-->
+      <!--<param name="fieldHelpDWR" value="com.heb.operations.ui.framework.dwr.service.FieldHelpDWR"/>-->
+    <!--</create>-->
+    <!--<create creator="spring" javascript="ProductDWR">-->
+      <!--<param name="manageProductDWR" value="com.heb.operations.cps.dwr.service.ManageProductDWR"/>-->
+    <!--</create>-->
+    <!--<create creator="spring" javascript="BatchUpload2DWR">-->
+      <!--<param name="batchUpload2DWR" value="com.heb.operations.cps.batchUpload2.BatchUpload2DWR"/>-->
+    <!--</create>-->
+    <!---->
+	<!--<create creator="spring" javascript="ManageEDIDWR">-->
+      <!--<param name="manageCandidateEDIDWR" value="com.heb.operations.cps.dwr.service.ManageCandidateEDIDWR"/>-->
+    <!--</create>-->
+  </allow>
+
+</dwr>
